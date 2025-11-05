@@ -1,0 +1,12 @@
+{
+  "name": "phpactor",
+  "version": "0.1.0",
+  "description": "Intelligent PHP completion and refactoring language server",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/phpactor/phpactor",
+  "license": "MIT",
+  "keywords": ["php", "lsp", "language-server"]
+}

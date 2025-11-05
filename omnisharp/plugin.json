@@ -1,12 +1,12 @@
 {
-  "name": "csharp-ls",
+  "name": "omnisharp",
   "version": "0.1.0",
-  "description": "Roslyn-based C# language server",
+  "description": "Official .NET language server with rich C# support",
   "author": {
     "name": "Piebald LLC",
     "email": "support@piebald.ai"
   },
-  "repository": "https://github.com/razzmatazz/csharp-language-server",
+  "repository": "https://github.com/OmniSharp/omnisharp-roslyn",
   "license": "MIT",
   "keywords": ["csharp", "c#", "dotnet", "lsp", "language-server"]
 }

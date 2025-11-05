@@ -1,8 +1,8 @@
 {
     "php": {
-        "command": "intelephense",
+        "command": "phpactor",
         "args": [
-            "--stdio"
+            "language-server"
         ],
         "extensionToLanguage": {
             ".php": "php",

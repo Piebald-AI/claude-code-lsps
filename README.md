@@ -144,16 +144,19 @@ sudo pacman -S clang
 </details>
 
 <details>
-<summary>PHP (<code>intelephense</code>)</summary>
+<summary>PHP (<code>phpactor</code>)</summary>
 
-Install **Intelephense**:
+Install **Phpactor**:
 ```bash
-# npm
-npm install -g intelephense
+# Using composer (recommended)
+composer global require phpactor/phpactor
 
-# pnpm
-pnpm install -g intelephense
+# Or using package manager
+# macOS with Homebrew:
+brew install phpactor/tap/phpactor
 ```
+
+Ensure `~/.composer/vendor/bin` (or `~/.config/composer/vendor/bin` on some systems) is in your PATH.
 
 </details>
 
@@ -168,11 +171,21 @@ gem install ruby-lsp
 </details>
 
 <details>
-<summary>C# (<code>csharp-ls</code>)</summary>
+<summary>C# (<code>omnisharp</code>)</summary>
 
-Install **csharp-ls** (requires .NET 9 SDK):
+Install **OmniSharp** (requires .NET SDK):
 ```bash
-dotnet tool install --global csharp-ls
+# macOS with Homebrew:
+brew install omnisharp/omnisharp-roslyn/omnisharp-mono
+
+# Or download from releases:
+# https://github.com/OmniSharp/omnisharp-roslyn/releases
+
+# Extract and add to PATH, or use the install script:
+# Linux/macOS:
+curl -L https://github.com/OmniSharp/omnisharp-roslyn/releases/latest/download/omnisharp-linux-x64-net6.0.tar.gz | tar xz -C ~/.local/bin
+
+# Ensure the OmniSharp executable is in your PATH
 ```
 
 </details>

@@ -1,7 +1,9 @@
 {
     "csharp": {
-        "command": "csharp-ls",
-        "args": [],
+        "command": "OmniSharp",
+        "args": [
+            "--languageserver"
+        ],
         "extensionToLanguage": {
             ".cs": "csharp",
             ".csx": "csharp"
