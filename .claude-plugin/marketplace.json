@@ -36,6 +36,145 @@
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
       }
+    },
+    {
+      "name": "pyright",
+      "version": "0.1.0",
+      "source": "./pyright",
+      "description": "Python language server with excellent type checking",
+      "category": "development",
+      "tags": [
+        "python",
+        "lsp",
+        "language-server",
+        "type-checking"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "gopls",
+      "version": "0.1.0",
+      "source": "./gopls",
+      "description": "Official Go language server",
+      "category": "development",
+      "tags": [
+        "go",
+        "golang",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "jdtls",
+      "version": "0.1.0",
+      "source": "./jdtls",
+      "description": "Eclipse JDT Language Server for Java",
+      "category": "development",
+      "tags": [
+        "java",
+        "lsp",
+        "language-server",
+        "eclipse"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "clangd",
+      "version": "0.1.0",
+      "source": "./clangd",
+      "description": "LLVM-based language server for C and C++",
+      "category": "development",
+      "tags": [
+        "c",
+        "cpp",
+        "c++",
+        "lsp",
+        "language-server",
+        "llvm",
+        "clang"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "ruby-lsp",
+      "version": "0.1.0",
+      "source": "./ruby-lsp",
+      "description": "Modern Ruby language server by Shopify",
+      "category": "development",
+      "tags": [
+        "ruby",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "vscode-langservers",
+      "version": "0.1.0",
+      "source": "./vscode-langservers",
+      "description": "HTML and CSS language servers from VS Code",
+      "category": "development",
+      "tags": [
+        "html",
+        "css",
+        "lsp",
+        "language-server",
+        "vscode"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "phpactor",
+      "version": "0.1.0",
+      "source": "./phpactor",
+      "description": "Intelligent PHP completion and refactoring language server",
+      "category": "development",
+      "tags": [
+        "php",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
+    },
+    {
+      "name": "omnisharp",
+      "version": "0.1.0",
+      "source": "./omnisharp",
+      "description": "Official .NET language server with rich C# support",
+      "category": "development",
+      "tags": [
+        "csharp",
+        "c#",
+        "dotnet",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
     }
   ]
 }
