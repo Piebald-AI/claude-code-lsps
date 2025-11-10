@@ -1,8 +1,8 @@
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](...) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, C/C++, PHP, Ruby, C#, and HTML/CSS.  [LSP servers]() provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, C/C++, PHP, Ruby, C#, and HTML/CSS.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
-[**Claude Code is going to officially support LSP soon.**](linktoreddit)  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool (enable via `$ENABLE_LSP_TOOL=1`) that Claude can use to
+[**Claude Code is going to officially support LSP soon.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool (enable via `$ENABLE_LSP_TOOL=1`) that Claude can use to
 - Go to the definition for symbols (`goToDefinition`)
 - Hover over symbols (`hover`)
 - List all the symbols in a file (`documentSymbol`)
