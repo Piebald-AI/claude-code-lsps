@@ -1,6 +1,6 @@
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, C/C++, PHP, Ruby, C#, and HTML/CSS.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, C/C++, PHP, Ruby, C#, PowerShell, and HTML/CSS.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code is going to officially support LSP soon.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool (enable via `$ENABLE_LSP_TOOL=1`) that Claude can use to
 - Go to the definition for symbols (`goToDefinition`)
@@ -186,6 +186,29 @@ brew install omnisharp/omnisharp-roslyn/omnisharp-mono
 curl -L https://github.com/OmniSharp/omnisharp-roslyn/releases/latest/download/omnisharp-linux-x64-net6.0.tar.gz | tar xz -C ~/.local/bin
 
 # Ensure the OmniSharp executable is in your PATH
+```
+
+</details>
+
+<details>
+<summary>PowerShell (<code>powershell-editor-services</code>)</summary>
+
+Requires **PowerShell 7+** (`pwsh`) installed and available in PATH.
+
+```bash
+# Windows (winget)
+winget install Microsoft.PowerShell
+
+# macOS
+brew install powershell/tap/powershell
+
+# Ubuntu/Debian
+# See: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu
+```
+
+The **PowerShellEditorServices** module will be automatically installed on first use if not already present. To install it manually:
+```powershell
+Install-Module -Name PowerShellEditorServices -Scope CurrentUser
 ```
 
 </details>
