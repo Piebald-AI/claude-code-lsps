@@ -1,0 +1,12 @@
+{
+  "name": "texlab",
+  "version": "0.1.0",
+  "description": "LaTeX language server with completion, references, and document symbols",
+  "author": {
+    "name": "Micah Stubbs",
+    "email": "git@micah.fyi"
+  },
+  "repository": "https://github.com/latex-lsp/texlab",
+  "license": "GPL-3.0",
+  "keywords": ["latex", "tex", "lsp", "language-server", "texlab"]
+}

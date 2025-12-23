@@ -1,0 +1,16 @@
+{
+    "latex": {
+        "command": "texlab",
+        "args": [],
+        "extensionToLanguage": {
+            ".tex": "latex",
+            ".bib": "bibtex",
+            ".cls": "latex",
+            ".sty": "latex"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

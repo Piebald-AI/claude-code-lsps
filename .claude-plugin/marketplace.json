@@ -212,6 +212,24 @@
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
       }
+    },
+    {
+      "name": "texlab",
+      "version": "0.1.0",
+      "source": "./texlab",
+      "description": "LaTeX language server with completion, references, and document symbols",
+      "category": "development",
+      "tags": [
+        "latex",
+        "tex",
+        "lsp",
+        "language-server",
+        "texlab"
+      ],
+      "author": {
+        "name": "Micah Stubbs",
+        "email": "git@micah.fyi"
+      }
     }
   ]
 }
