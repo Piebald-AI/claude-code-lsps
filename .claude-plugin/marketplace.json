@@ -194,6 +194,17 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "powershell-editor-services": {
+          "command": "pwsh",
+          "args": ["-NoLogo", "-NoProfile", "-Command", "if (-not (Get-Module -ListAvailable PowerShellEditorServices)) { Install-Module -Name PowerShellEditorServices -Scope CurrentUser -Force }; Import-Module PowerShellEditorServices; Start-EditorServices -HostName 'Claude Code' -HostProfileId 'ClaudeCode' -HostVersion '1.0.0' -Stdio -BundledModulesPath (Split-Path (Get-Module PowerShellEditorServices -ListAvailable).Path) -LogPath '/dev/null' -LogLevel 'None' -EnableConsoleRepl"],
+          "extensionToLanguage": {
+            ".ps1": "powershell",
+            ".psm1": "powershell",
+            ".psd1": "powershell"
+          }
+        }
       }
     },
     {
