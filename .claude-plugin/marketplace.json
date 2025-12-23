@@ -141,6 +141,26 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "vscode-html-language-server": {
+          "command": "vscode-html-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".html": "html",
+            ".htm": "html"
+          }
+        },
+        "vscode-css-language-server": {
+          "command": "vscode-css-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".css": "css",
+            ".scss": "scss",
+            ".sass": "sass",
+            ".less": "less"
+          }
+        }
       }
     },
     {
