@@ -70,6 +70,14 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "gopls": {
+          "command": "gopls",
+          "extensionToLanguage": {
+            ".go": "go"
+          }
+        }
       }
     },
     {
