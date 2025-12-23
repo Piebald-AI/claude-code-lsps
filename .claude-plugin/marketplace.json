@@ -229,6 +229,17 @@
       "author": {
         "name": "Micah Stubbs",
         "email": "git@micah.fyi"
+      },
+      "lspServers": {
+        "texlab": {
+          "command": "texlab",
+          "extensionToLanguage": {
+            ".tex": "latex",
+            ".bib": "bibtex",
+            ".cls": "latex",
+            ".sty": "latex"
+          }
+        }
       }
     }
   ]
