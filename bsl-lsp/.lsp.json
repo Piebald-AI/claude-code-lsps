@@ -1,0 +1,14 @@
+{
+    "bsl": {
+        "command": "bsl-language-server",
+        "args": [],
+        "extensionToLanguage": {
+            ".bsl": "bsl",
+            ".os": "bsl"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

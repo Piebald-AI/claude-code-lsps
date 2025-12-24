@@ -1,6 +1,6 @@
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, and LaTeX.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code is going to officially support LSP soon.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.30 (October 31st) they adding the working beginnings of a system to run LSP servers from plugins automatically on startup, and an `LSP` tool (enable via `$ENABLE_LSP_TOOL=1`) that Claude can use to
 - Go to the definition for symbols (`goToDefinition`)
@@ -268,5 +268,40 @@ choco install texlab
 ```
 
 The `texlab` executable needs to be in your PATH. Supports `.tex`, `.bib`, `.cls`, and `.sty` files.
+
+</details>
+
+<details>
+<summary>BSL / 1C:Enterprise (<code>bsl-language-server</code>)</summary>
+
+Install **bsl-language-server**, the Language Server Protocol implementation for BSL (1C:Enterprise) and OneScript.
+
+Download the native executable for your platform from [GitHub Releases](https://github.com/1c-syntax/bsl-language-server/releases):
+
+| Platform | Download |
+|----------|----------|
+| Windows | `bsl-language-server_win.zip` |
+| macOS | `bsl-language-server_mac.zip` |
+| Linux | `bsl-language-server_nix.zip` |
+
+Extract the archive and add the directory containing `bsl-language-server` executable to your PATH:
+
+```bash
+# Linux/macOS example
+unzip bsl-language-server_nix.zip -d ~/bsl-language-server
+export PATH="$HOME/bsl-language-server/bin:$PATH"
+
+# Add to your shell profile (~/.bashrc, ~/.zshrc, etc.) to make it permanent
+```
+
+```powershell
+# Windows (PowerShell) example
+Expand-Archive bsl-language-server_win.zip -DestinationPath $env:USERPROFILE\bsl-language-server
+$env:PATH += ";$env:USERPROFILE\bsl-language-server\bin"
+
+# Add to system PATH via System Properties to make it permanent
+```
+
+The `bsl-language-server` executable needs to be in your PATH. Supports `.bsl` and `.os` files.
 
 </details>
