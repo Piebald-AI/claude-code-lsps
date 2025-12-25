@@ -211,6 +211,15 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "kotlin-lsp": {
+          "command": "kotlin-lsp",
+          "extensionToLanguage": {
+            ".kt": "kotlin",
+            ".kts": "kotlin"
+          }
+        }
       }
     },
     {
