@@ -157,6 +157,20 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "phpactor": {
+          "command": "phpactor",
+          "args": ["language-server"],
+          "extensionToLanguage": {
+            ".php": "php",
+            ".phtml": "php",
+            ".php3": "php",
+            ".php4": "php",
+            ".php5": "php",
+            ".phps": "php"
+          }
+        }
       }
     },
     {
