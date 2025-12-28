@@ -1,7 +1,7 @@
 {
     "kotlin": {
         "command": "kotlin-lsp",
-        "args": [],
+        "args": ["--stdio"],
         "extensionToLanguage": {
             ".kt": "kotlin",
             ".kts": "kotlin"
