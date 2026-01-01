@@ -175,6 +175,16 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "omnisharp": {
+          "command": "OmniSharp",
+          "args": ["--languageserver"],
+          "extensionToLanguage": {
+            ".cs": "csharp",
+            ".csx": "csharp"
+          }
+        }
       }
     },
     {
