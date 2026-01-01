@@ -1,3 +1,29 @@
+<div>
+<div align="right">
+<a href="https://piebald.ai"><img width="200" top="20" align="right" src="https://github.com/Piebald-AI/.github/raw/main/Wordmark.svg"></a>
+</div>
+
+<div align="left">
+
+### Announcement: Piebald is released!
+We've released **Piebald**, the ultimate agentic AI developer experience. \
+Download it and try it out for free!  **https://piebald.ai/**
+
+<sub>[Scroll down for Claude Code LSPs.](#claude-code-lsps) :point_down:</sub>
+
+</div>
+</div>
+
+<div align="left">
+<a href="https://piebald.ai">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://piebald.ai/screenshot-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://piebald.ai/screenshot-light.png">
+  <img alt="hero" width="600" src="https://piebald.ai/screenshot-light.png">
+</picture>
+</a>
+</div>
+
 # Claude Code LSPs
 
 This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
