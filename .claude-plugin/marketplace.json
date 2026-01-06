@@ -56,6 +56,24 @@
       }
     },
     {
+      "name": "basedpyright",
+      "version": "0.1.0",
+      "source": "./basedpyright",
+      "description": "Python language server using basedpyright with stricter type checking",
+      "category": "development",
+      "tags": [
+        "python",
+        "lsp",
+        "language-server",
+        "type-checking",
+        "basedpyright"
+      ],
+      "author": {
+        "name": "Tyler Laprade",
+        "email": "tyler@tylerlaprade.com"
+      }
+    },
+    {
       "name": "gopls",
       "version": "0.1.0",
       "source": "./gopls",

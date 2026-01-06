@@ -1,0 +1,12 @@
+{
+  "name": "basedpyright",
+  "version": "0.1.0",
+  "description": "Python language server using basedpyright with stricter type checking",
+  "author": {
+    "name": "Tyler Laprade",
+    "email": "tyler@tylerlaprade.com"
+  },
+  "repository": "https://github.com/DetachHead/basedpyright",
+  "license": "MIT",
+  "keywords": ["python", "lsp", "language-server", "type-checking", "basedpyright"]
+}

@@ -1,0 +1,17 @@
+{
+    "python": {
+        "command": "basedpyright-langserver",
+        "args": [
+            "--stdio"
+        ],
+        "extensionToLanguage": {
+            ".py": "python",
+            ".pyi": "python",
+            ".pyw": "python"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}
