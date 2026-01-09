@@ -21,6 +21,20 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "vtsls": {
+          "command": "vtsls",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".ts": "typescript",
+            ".tsx": "typescriptreact",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".cjs": "javascript"
+          }
+        }
       }
     },
     {
