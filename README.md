@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manaually via `$ENABLE_LSP_TOOL=1`.
 
@@ -310,6 +310,39 @@ Pkg.add("SymbolServer")
 Make sure `julia` is in your PATH. The language server will automatically detect your Julia project environment based on `Project.toml`.
 
 > **Note:** The language server may take some time to start on first use while it precompiles. Subsequent starts will be faster, especially with Julia 1.9+.
+
+</details>
+
+<details>
+<summary>Vue (<code>vue-volar</code>)</summary>
+
+Install **@vue/language-server** for Vue.js Single File Component support:
+```bash
+# npm
+npm install -g @vue/language-server
+
+# pnpm
+pnpm install -g @vue/language-server
+
+# bun
+bun install -g @vue/language-server
+```
+
+The `vue-language-server` executable needs to be in your PATH.
+
+**Important:** For full functionality, TypeScript must be installed in your project:
+```bash
+npm install --save-dev typescript
+```
+
+The language server uses the project's `node_modules/typescript/lib` for type checking. This enables:
+- Template expression type-checking
+- Component prop validation
+- Slot type inference
+- CSS/SCSS intellisense in `<style>` blocks
+- Go-to-definition across `<template>`, `<script>`, `<style>`
+
+> **Note:** This plugin complements the existing `vtsls` plugin for TypeScript, providing full Vue + TS coverage.
 
 </details>
 

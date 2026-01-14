@@ -1,0 +1,12 @@
+{
+  "name": "vue-volar",
+  "version": "0.1.0",
+  "description": "Vue.js language server integration (Volar)",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/vuejs/language-tools",
+  "license": "MIT",
+  "keywords": ["vue", "volar", "lsp", "language-server", "vue3"]
+}
