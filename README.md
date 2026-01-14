@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manaually via `$ENABLE_LSP_TOOL=1`.
 
@@ -294,6 +294,22 @@ choco install texlab
 ```
 
 The `texlab` executable needs to be in your PATH. Supports `.tex`, `.bib`, `.cls`, and `.sty` files.
+
+</details>
+
+<details>
+<summary>Julia (<code>julia-lsp</code>)</summary>
+
+Install **LanguageServer.jl** in Julia:
+```julia
+using Pkg
+Pkg.add("LanguageServer")
+Pkg.add("SymbolServer")
+```
+
+Make sure `julia` is in your PATH. The language server will automatically detect your Julia project environment based on `Project.toml`.
+
+> **Note:** The language server may take some time to start on first use while it precompiles. Subsequent starts will be faster, especially with Julia 1.9+.
 
 </details>
 

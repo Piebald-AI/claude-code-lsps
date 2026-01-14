@@ -1,0 +1,12 @@
+{
+  "name": "julia-lsp",
+  "version": "0.1.0",
+  "description": "Julia language server using LanguageServer.jl",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/julia-vscode/LanguageServer.jl",
+  "license": "MIT",
+  "keywords": ["julia", "lsp", "language-server", "scientific-computing"]
+}

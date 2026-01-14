@@ -275,6 +275,23 @@
           }
         }
       }
+    },
+    {
+      "name": "julia-lsp",
+      "version": "0.1.0",
+      "source": "./julia-lsp",
+      "description": "Julia language server using LanguageServer.jl",
+      "category": "development",
+      "tags": [
+        "julia",
+        "lsp",
+        "language-server",
+        "scientific-computing"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      }
     }
   ]
 }

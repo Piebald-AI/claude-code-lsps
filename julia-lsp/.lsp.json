@@ -1,0 +1,19 @@
+{
+    "julia": {
+        "command": "julia",
+        "args": [
+            "--startup-file=no",
+            "--history-file=no",
+            "--quiet",
+            "-e",
+            "using LanguageServer; runserver()"
+        ],
+        "extensionToLanguage": {
+            ".jl": "julia"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}
