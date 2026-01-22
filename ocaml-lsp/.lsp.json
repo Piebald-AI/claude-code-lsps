@@ -1,0 +1,16 @@
+{
+    "ocaml": {
+        "command": "ocamllsp",
+        "args": [],
+        "extensionToLanguage": {
+            ".ml": "ocaml",
+            ".mli": "ocaml.interface",
+            ".mly": "menhir",
+            ".mll": "ocamllex"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}
