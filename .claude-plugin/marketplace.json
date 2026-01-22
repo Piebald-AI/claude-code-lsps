@@ -310,6 +310,24 @@
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
       }
+    },
+    {
+      "name": "ocaml-lsp",
+      "version": "0.1.0",
+      "source": "./ocaml-lsp",
+      "description": "OCaml language server (ocaml-lsp-server)",
+      "category": "development",
+      "tags": [
+        "ocaml",
+        "ml",
+        "functional",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "yousleepwhen",
+        "email": "yousleepwhen@gmail.com"
+      }
     }
   ]
 }
