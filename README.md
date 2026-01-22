@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manaually via `$ENABLE_LSP_TOOL=1`.
 
@@ -378,5 +378,34 @@ $env:PATH += ";$env:USERPROFILE\bsl-language-server\bin"
 ```
 
 The `bsl-language-server` executable needs to be in your PATH. Supports `.bsl` and `.os` files.
+
+</details>
+
+<details>
+<summary>OCaml (<code>ocaml-lsp</code>)</summary>
+
+Install **ocaml-lsp-server** using opam (OCaml package manager):
+
+```bash
+# Install opam first (if not already installed)
+# macOS
+brew install opam
+
+# Ubuntu/Debian
+apt install opam
+
+# Initialize opam (first time only)
+opam init
+eval $(opam env)
+
+# Install ocaml-lsp-server
+opam install ocaml-lsp-server
+```
+
+The plugin uses `opam exec -- ocamllsp` to run the language server, ensuring correct PATH resolution within your opam environment.
+
+Supports `.ml` (implementation), `.mli` (interface), `.mly` (Menhir parser), and `.mll` (OCamllex lexer) files.
+
+> **Note:** Make sure you have an active opam switch with OCaml installed. The language server works best when run from a project directory with a proper `dune` build setup.
 
 </details>
