@@ -190,7 +190,7 @@ sudo pacman -S clang
 Install **Phpactor**:
 ```bash
 # Using composer (recommended)
-composer global require phpactor/phpactor
+composer global require --dev phpactor/phpactor
 
 # Or using package manager
 # macOS with Homebrew:
