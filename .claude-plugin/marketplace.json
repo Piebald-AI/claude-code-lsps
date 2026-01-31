@@ -125,6 +125,23 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "clangd": {
+          "command": "clangd",
+          "extensionToLanguage": {
+            ".c": "c",
+            ".cpp": "cpp",
+            ".cc": "cpp",
+            ".cxx": "cpp",
+            ".c++": "cpp",
+            ".h": "c",
+            ".hpp": "cpp",
+            ".hh": "cpp",
+            ".hxx": "cpp",
+            ".h++": "cpp"
+          }
+        }
       }
     },
     {
