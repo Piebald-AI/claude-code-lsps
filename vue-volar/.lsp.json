@@ -7,9 +7,6 @@
         },
         "transport": "stdio",
         "initializationOptions": {
-            "typescript": {
-                "tsdk": "node_modules/typescript/lib"
-            },
             "vue": {
                 "hybridMode": false
             }
