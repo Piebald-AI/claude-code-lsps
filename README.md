@@ -316,17 +316,19 @@ Make sure `julia` is in your PATH. The language server will automatically detect
 <details>
 <summary>Vue (<code>vue-volar</code>)</summary>
 
-Install **@vue/language-server** for Vue.js Single File Component support:
+Install **@vue/language-server** (v2.x) globally for Vue.js Single File Component support:
 ```bash
 # npm
-npm install -g @vue/language-server
+npm install -g @vue/language-server@2
 
 # pnpm
-pnpm install -g @vue/language-server
+pnpm install -g @vue/language-server@2
 
 # bun
-bun install -g @vue/language-server
+bun install -g @vue/language-server@2
 ```
+
+> **Important:** Version 2.x is required. Version 3.x removed the internal TypeScript communication layer and requires the LSP client to implement custom request forwarding (`tsserver/request` → `tsserver/response`) between Vue and TypeScript language servers. Claude Code's simple LSP integration does not support this mechanism. See [v3 upgrade guide](https://github.com/vuejs/language-tools/discussions/5456) for details.
 
 The `vue-language-server` executable needs to be in your PATH.
 
