@@ -141,6 +141,17 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "ruby-lsp": {
+          "command": "ruby-lsp",
+          "extensionToLanguage": {
+            ".rb": "ruby",
+            ".rbw": "ruby",
+            ".rake": "ruby",
+            ".gemspec": "ruby"
+          }
+        }
       }
     },
     {
