@@ -44,9 +44,6 @@ Claude can the LSP tool to
 - Find all functions that call a given function (`incomingCalls`)
 - Find all functions/methods called by a given function (`outgoingCalls`)
 
-> [!warning]
-> Support for LSP in Claude Code is pretty raw still.  There are bugs in the different LSP operations, no documention, and no UI indication that your LSP servers are started/running/have errors or even exist.  But it's there, and with [tweakcc](https://github.com/Piebald-AI/tweakcc) you can make it work.
-
 ## Patching Claude Code
 
 Run `npx tweakcc --apply`. [tweakcc](https://github.com/Piebald-AI/tweakcc) automatically detects your Claude Code installation (npm or native) and applies the necessary patches.   It will automatically patch your Claude Code installation to make CC's builtin LSP support usable.  (It also does a bunch of other things like let you customize all the system prompt parts, create new CC themes, change the thinking verbs, and a lot more.)
