@@ -597,7 +597,7 @@
       },
       "lspServers": {
         "vue": {
-          "command": "vue-language-server",
+          "command": "./vue-language-server-v2-wrapper.sh",
           "args": [
             "--stdio"
           ],
