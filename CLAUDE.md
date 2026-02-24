@@ -20,6 +20,7 @@ This is a Claude Code marketplace containing LSP (Language Server Protocol) plug
 scripts/
   sync-lsp-to-marketplace.mjs    # Generates marketplace lspServers from .lsp.json files
   validate-lsp-definitions.mjs   # Validates consistency and schema constraints
+  validate-runtime-marketplace.mjs # Runs Claude Code's built-in marketplace validator
 ```
 
 ## Adding a New LSP Plugin
@@ -66,7 +67,9 @@ scripts/
 
 7. Run `node scripts/validate-lsp-definitions.mjs`
 
-8. Add setup instructions to `README.md` in the language-specific details section
+8. Run `node scripts/validate-runtime-marketplace.mjs`
+
+9. Add setup instructions to `README.md` in the language-specific details section
 
 ## LSP Configuration Fields
 

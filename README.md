@@ -78,6 +78,7 @@ Run this workflow after any LSP config change:
 ```bash
 node scripts/sync-lsp-to-marketplace.mjs
 node scripts/validate-lsp-definitions.mjs
+node scripts/validate-runtime-marketplace.mjs
 ```
 
 ## Language-specific setup instructions
