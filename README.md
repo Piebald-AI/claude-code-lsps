@@ -350,7 +350,7 @@ bun install -g @vue/language-server@2
 
 > **Important:** Version 2.x is required. Version 3.x removed the internal TypeScript communication layer and requires the LSP client to implement custom request forwarding (`tsserver/request` → `tsserver/response`) between Vue and TypeScript language servers. Claude Code's simple LSP integration does not support this mechanism. See [v3 upgrade guide](https://github.com/vuejs/language-tools/discussions/5456) for details.
 
-The bundled wrapper will scan `PATH` and pick the newest compatible `vue-language-server` **2.x.x** binary (ignoring `3.x.x`).
+The plugin launcher scans `PATH` and picks the newest compatible `vue-language-server` **2.x.x** binary (ignoring `3.x.x`).
 
 **Important:** For full functionality, TypeScript must be installed in your project:
 ```bash
