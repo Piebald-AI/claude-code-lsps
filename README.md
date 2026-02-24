@@ -76,10 +76,15 @@ Then enable the plugins of your choice:
 Run this workflow after any LSP config change:
 
 ```bash
-node scripts/sync-lsp-to-marketplace.mjs
-node scripts/validate-lsp-definitions.mjs
-node scripts/validate-runtime-marketplace.mjs
+node scripts/validate-all.mjs
 ```
+
+`validate-all` runs:
+- `sync-lsp-to-marketplace.mjs`
+- `validate-lsp-definitions.mjs`
+- `validate-runtime-marketplace.mjs`
+
+Optional: `node scripts/validate-all.mjs --skip-runtime` to skip Claude runtime validation.
 
 ## Language-specific setup instructions
 
