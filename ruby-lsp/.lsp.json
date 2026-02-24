@@ -8,6 +8,15 @@
             ".rake": "ruby",
             ".gemspec": "ruby"
         },
+        "filePatterns": [
+            "**/Gemfile",
+            "**/Rakefile",
+            "**/Brewfile",
+            "**/Podfile",
+            "**/Capfile",
+            "**/Guardfile",
+            "**/Vagrantfile"
+        ],
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

@@ -11,6 +11,7 @@
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},
+        "startupTimeout": 60000,
         "maxRestarts": 3
     }
 }

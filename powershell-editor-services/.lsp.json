@@ -5,7 +5,7 @@
             "-NoLogo",
             "-NoProfile",
             "-Command",
-            "if (-not (Get-Module -ListAvailable PowerShellEditorServices)) { Install-Module -Name PowerShellEditorServices -Scope CurrentUser -Force }; Import-Module PowerShellEditorServices; Start-EditorServices -HostName 'Claude Code' -HostProfileId 'ClaudeCode' -HostVersion '1.0.0' -Stdio -BundledModulesPath (Split-Path (Get-Module PowerShellEditorServices -ListAvailable).Path) -LogPath '/dev/null' -LogLevel 'None' -EnableConsoleRepl"
+            "$module = Get-Module -ListAvailable PowerShellEditorServices | Sort-Object Version -Descending | Select-Object -First 1; if (-not $module) { throw 'PowerShellEditorServices is not installed. Run: Install-Module -Name PowerShellEditorServices -Scope CurrentUser' }; Import-Module $module.Path; Start-EditorServices -HostName 'Claude Code' -HostProfileId 'ClaudeCode' -HostVersion '1.0.0' -Stdio -BundledModulesPath (Split-Path $module.Path) -LogPath '/dev/null' -LogLevel 'None' -EnableConsoleRepl"
         ],
         "extensionToLanguage": {
             ".ps1": "powershell",
@@ -15,6 +15,8 @@
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},
+        "startupTimeout": 120000,
+        "shutdownTimeout": 20000,
         "maxRestarts": 3
     }
 }

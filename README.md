@@ -31,9 +31,11 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
-[**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manaually via `$ENABLE_LSP_TOOL=1`.
+[**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
-Claude can the LSP tool to
+This marketplace currently targets **Claude Code 2.1.50+** (latest release: **2.1.52**) to use modern LSP configuration fields like `startupTimeout`.
+
+Claude can use the LSP tool to
 - Go to the definition for symbols (`goToDefinition`)
 - Go to the implementation for symbols (`goToImplementation`)
 - Hover over symbols (`hover`)
@@ -62,6 +64,21 @@ Then enable the plugins of your choice:
 5. Select the plugins you'd like with the spacebar (e.g. TypeScript, Rust)
 6. Press "i" to install them
 7. Restart Claude Code
+
+## LSP definition workflow (for contributors)
+
+- `.lsp.json` files are the canonical source of LSP configuration.
+- `.claude-plugin/marketplace.json` `lspServers` entries are generated from `.lsp.json`.
+- Do not hand-edit generated `lspServers` blocks.
+- `sync-lsp-to-marketplace` only updates plugins that already exist in marketplace `plugins[]`. Add a marketplace entry first when introducing a new plugin directory.
+- `validate-lsp-definitions` will fail if a plugin directory exists but is not referenced in marketplace `plugins[]`.
+
+Run this workflow after any LSP config change:
+
+```bash
+node scripts/sync-lsp-to-marketplace.mjs
+node scripts/validate-lsp-definitions.mjs
+```
 
 ## Language-specific setup instructions
 
@@ -244,7 +261,7 @@ brew install powershell/tap/powershell
 # See: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu
 ```
 
-The **PowerShellEditorServices** module will be automatically installed on first use if not already present. To install it manually:
+The **PowerShellEditorServices** module is not installed automatically at runtime. Install it manually:
 ```powershell
 Install-Module -Name PowerShellEditorServices -Scope CurrentUser
 ```

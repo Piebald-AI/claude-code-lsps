@@ -8,13 +8,18 @@ This is a Claude Code marketplace containing LSP (Language Server Protocol) plug
 
 **Supported languages:** TypeScript/JavaScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL
 
+**Compatibility target:** Claude Code 2.1.50+ (latest release: 2.1.52)
+
 ## Repository Structure
 
 ```
-.claude-plugin/marketplace.json  # Marketplace manifest listing all plugins
+.claude-plugin/marketplace.json  # Marketplace manifest with generated lspServers for local plugins
 <language>/
   plugin.json                    # Plugin metadata (name, version, description, keywords)
-  .lsp.json                      # LSP configuration (command, args, file extensions, transport)
+  .lsp.json                      # Canonical LSP configuration (command, transport, mappings, timeouts)
+scripts/
+  sync-lsp-to-marketplace.mjs    # Generates marketplace lspServers from .lsp.json files
+  validate-lsp-definitions.mjs   # Validates consistency and schema constraints
 ```
 
 ## Adding a New LSP Plugin
@@ -46,6 +51,8 @@ This is a Claude Code marketplace containing LSP (Language Server Protocol) plug
     "transport": "stdio",
     "initializationOptions": {},
     "settings": {},
+    "startupTimeout": 60000,
+    "shutdownTimeout": 15000,
     "maxRestarts": 3
   }
 }
@@ -53,14 +60,23 @@ This is a Claude Code marketplace containing LSP (Language Server Protocol) plug
 
 4. Add entry to `.claude-plugin/marketplace.json` in the `plugins` array
 
-5. Add setup instructions to `README.md` in the language-specific details section
+5. Ensure the plugin has been added to `.claude-plugin/marketplace.json` `plugins[]` first
+
+6. Run `node scripts/sync-lsp-to-marketplace.mjs` to generate/update `lspServers` for the plugin
+
+7. Run `node scripts/validate-lsp-definitions.mjs`
+
+8. Add setup instructions to `README.md` in the language-specific details section
 
 ## LSP Configuration Fields
 
 - `command`: The executable to run (must be in PATH)
 - `args`: Command-line arguments (typically `["--stdio"]`)
 - `extensionToLanguage`: Maps file extensions to LSP language IDs
+- `filePatterns`: Optional glob patterns for extensionless language files (for example `Gemfile`)
 - `transport`: Always `"stdio"` for this project
+- `startupTimeout`: Optional server startup wait time in milliseconds (recommended for slow servers)
+- `shutdownTimeout`: Optional server shutdown wait time in milliseconds
 - `maxRestarts`: Number of restart attempts on crash (default: 3)
 - `initializationOptions` / `settings`: LSP-specific configuration objects
 
@@ -68,4 +84,4 @@ This is a Claude Code marketplace containing LSP (Language Server Protocol) plug
 
 - Each plugin directory name should match the LSP tool name (e.g., `rust-analyzer`, `gopls`, `pyright`)
 - The `.lsp.json` can define multiple language servers in one file (see `vscode-langservers` for HTML + CSS example)
-- Some LSPs require complex initialization (see `powershell-editor-services` for inline module loading example)
+- `.lsp.json` is canonical; generated `lspServers` in marketplace should not be hand-edited

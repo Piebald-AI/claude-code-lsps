@@ -4,13 +4,10 @@
         "args": [
             "--stdio"
         ],
-        "languages": [
-            "html"
-        ],
-        "fileExtensions": [
-            ".html",
-            ".htm"
-        ],
+        "extensionToLanguage": {
+            ".html": "html",
+            ".htm": "html"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},
@@ -21,18 +18,12 @@
         "args": [
             "--stdio"
         ],
-        "languages": [
-            "css",
-            "scss",
-            "sass",
-            "less"
-        ],
-        "fileExtensions": [
-            ".css",
-            ".scss",
-            ".sass",
-            ".less"
-        ],
+        "extensionToLanguage": {
+            ".css": "css",
+            ".scss": "scss",
+            ".sass": "sass",
+            ".less": "less"
+        },
         "transport": "stdio",
         "initializationOptions": {},
         "settings": {},

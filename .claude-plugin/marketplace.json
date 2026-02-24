@@ -1,5 +1,8 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-code-lsps",
+  "version": "1.0.0",
+  "description": "Claude Code marketplace providing language server integrations across popular programming languages.",
   "owner": {
     "name": "Piebald LLC",
     "email": "support@piebald.ai"
@@ -21,6 +24,26 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "typescript": {
+          "command": "vtsls",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".cjs": "javascript",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".ts": "typescript",
+            ".tsx": "typescriptreact"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -36,6 +59,19 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "rust": {
+          "command": "rust-analyzer",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".rs": "rust"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -53,6 +89,23 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "python": {
+          "command": "pyright-langserver",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".py": "python",
+            ".pyi": "python",
+            ".pyw": "python"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -71,6 +124,23 @@
       "author": {
         "name": "Tyler Laprade",
         "email": "tyler@tylerlaprade.com"
+      },
+      "lspServers": {
+        "python": {
+          "command": "basedpyright-langserver",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".py": "python",
+            ".pyi": "python",
+            ".pyw": "python"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -88,6 +158,19 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "go": {
+          "command": "gopls",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".go": "go"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -105,6 +188,21 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "java": {
+          "command": "jdtls",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".java": "java"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 90000,
+          "shutdownTimeout": 15000,
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -125,6 +223,28 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "cpp": {
+          "command": "clangd",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".c": "c",
+            ".c++": "cpp",
+            ".cc": "cpp",
+            ".cpp": "cpp",
+            ".cxx": "cpp",
+            ".h": "c",
+            ".h++": "cpp",
+            ".hh": "cpp",
+            ".hpp": "cpp",
+            ".hxx": "cpp"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -141,6 +261,31 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "ruby": {
+          "command": "ruby-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".gemspec": "ruby",
+            ".rake": "ruby",
+            ".rb": "ruby",
+            ".rbw": "ruby"
+          },
+          "filePatterns": [
+            "**/Gemfile",
+            "**/Rakefile",
+            "**/Brewfile",
+            "**/Podfile",
+            "**/Capfile",
+            "**/Guardfile",
+            "**/Vagrantfile"
+          ],
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -159,6 +304,38 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "css": {
+          "command": "vscode-css-language-server",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".css": "css",
+            ".less": "less",
+            ".sass": "sass",
+            ".scss": "scss"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        },
+        "html": {
+          "command": "vscode-html-language-server",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".htm": "html",
+            ".html": "html"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -175,6 +352,26 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "php": {
+          "command": "phpactor",
+          "args": [
+            "language-server"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".php": "php",
+            ".php3": "php",
+            ".php4": "php",
+            ".php5": "php",
+            ".phps": "php",
+            ".phtml": "php"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -193,6 +390,23 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "csharp": {
+          "command": "OmniSharp",
+          "args": [
+            "--languageserver"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".cs": "csharp",
+            ".csx": "csharp"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 90000,
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -212,6 +426,28 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "powershell": {
+          "command": "pwsh",
+          "args": [
+            "-NoLogo",
+            "-NoProfile",
+            "-Command",
+            "$module = Get-Module -ListAvailable PowerShellEditorServices | Sort-Object Version -Descending | Select-Object -First 1; if (-not $module) { throw 'PowerShellEditorServices is not installed. Run: Install-Module -Name PowerShellEditorServices -Scope CurrentUser' }; Import-Module $module.Path; Start-EditorServices -HostName 'Claude Code' -HostProfileId 'ClaudeCode' -HostVersion '1.0.0' -Stdio -BundledModulesPath (Split-Path $module.Path) -LogPath '/dev/null' -LogLevel 'None' -EnableConsoleRepl"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".ps1": "powershell",
+            ".psd1": "powershell",
+            ".psm1": "powershell"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 120000,
+          "shutdownTimeout": 20000,
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -229,6 +465,23 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "kotlin": {
+          "command": "kotlin-lsp",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".kt": "kotlin",
+            ".kts": "kotlin"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -247,6 +500,22 @@
       "author": {
         "name": "Micah Stubbs",
         "email": "git@micah.fyi"
+      },
+      "lspServers": {
+        "latex": {
+          "command": "texlab",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".bib": "bibtex",
+            ".cls": "latex",
+            ".sty": "latex",
+            ".tex": "latex"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -267,12 +536,17 @@
         "email": "nixel2007@gmail.com"
       },
       "lspServers": {
-        "bsl-language-server": {
+        "bsl": {
           "command": "bsl-language-server",
+          "args": [],
+          "transport": "stdio",
           "extensionToLanguage": {
             ".bsl": "bsl",
             ".os": "bsl"
-          }
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
         }
       }
     },
@@ -291,6 +565,26 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "julia": {
+          "command": "julia",
+          "args": [
+            "--startup-file=no",
+            "--history-file=no",
+            "--quiet",
+            "-e",
+            "using LanguageServer; runserver()"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".jl": "julia"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 90000,
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -309,6 +603,28 @@
       "author": {
         "name": "Piebald LLC",
         "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "vue": {
+          "command": "vue-language-server",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".vue": "vue"
+          },
+          "initializationOptions": {
+            "typescript": {
+              "tsdk": "node_modules/typescript/lib"
+            },
+            "vue": {
+              "hybridMode": false
+            }
+          },
+          "settings": {},
+          "maxRestarts": 3
+        }
       }
     },
     {
@@ -327,6 +643,27 @@
       "author": {
         "name": "yousleepwhen",
         "email": "yousleepwhen@gmail.com"
+      },
+      "lspServers": {
+        "ocaml": {
+          "command": "opam",
+          "args": [
+            "exec",
+            "--",
+            "ocamllsp"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".ml": "ocaml",
+            ".mli": "ocaml.interface",
+            ".mll": "ocamllex",
+            ".mly": "menhir"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "maxRestarts": 3
+        }
       }
     }
   ]
