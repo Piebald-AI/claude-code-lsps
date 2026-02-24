@@ -7,7 +7,6 @@ export const ALLOWED_LSP_FIELDS = [
   "transport",
   "env",
   "extensionToLanguage",
-  "filePatterns",
   "workspaceFolder",
   "initializationOptions",
   "settings",
@@ -169,7 +168,7 @@ function normalizeServerConfig(serverName, serverConfig, pluginLabel) {
       continue;
     }
 
-    if (key === "args" || key === "filePatterns") {
+    if (key === "args") {
       const normalizedValue = normalizeStringArray(value, `${context}.${key}`, errors);
       if (normalizedValue) {
         normalized[key] = normalizedValue;

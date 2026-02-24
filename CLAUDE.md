@@ -73,7 +73,6 @@ scripts/
 - `command`: The executable to run (must be in PATH)
 - `args`: Command-line arguments (typically `["--stdio"]`)
 - `extensionToLanguage`: Maps file extensions to LSP language IDs
-- `filePatterns`: Optional glob patterns for extensionless language files (for example `Gemfile`)
 - `transport`: Always `"stdio"` for this project
 - `startupTimeout`: Optional server startup wait time in milliseconds (recommended for slow servers)
 - `shutdownTimeout`: Optional server shutdown wait time in milliseconds
