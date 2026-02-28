@@ -656,6 +656,52 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "ada-language-server",
+      "version": "0.1.0",
+      "source": "./ada-language-server",
+      "description": "Ada/SPARK and GPR language server",
+      "category": "development",
+      "tags": [
+        "ada",
+        "spark",
+        "gpr",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Quentin DAUPRAT",
+        "email": "cc-ada-lsp-support@adarium.dev"
+      },
+      "lspServers": {
+        "ada": {
+          "command": "ada_language_server",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".adb": "ada",
+            ".adc": "ada",
+            ".ads": "ada"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        },
+        "gpr": {
+          "command": "ada_language_server",
+          "args": [
+            "--language-gpr"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".gpr": "gpr"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,18 @@
+{
+  "name": "ada-language-server",
+  "version": "0.1.0",
+  "description": "Ada/SPARK and GPR language server",
+  "author": {
+    "name": "Quentin DAUPRAT",
+    "email": "cc-ada-lsp-support@adarium.dev"
+  },
+  "repository": "https://github.com/AdaCore/ada_language_server",
+  "license": "GPL-3.0",
+  "keywords": [
+    "ada",
+    "spark",
+    "gpr",
+    "lsp",
+    "language-server"
+  ]
+}
