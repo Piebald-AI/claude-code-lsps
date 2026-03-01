@@ -1,0 +1,12 @@
+{
+  "name": "dart",
+  "version": "0.1.0",
+  "description": "Dart language server for Claude Code, providing code intelligence for Dart and Flutter projects",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/dart-lang/sdk",
+  "license": "BSD-3-Clause",
+  "keywords": ["dart", "flutter", "lsp", "language-server"]
+}

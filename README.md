@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), and Ada.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, and Dart.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -460,5 +460,45 @@ The plugin uses `opam exec -- ocamllsp` to run the language server, ensuring cor
 Supports `.ml` (implementation), `.mli` (interface), `.mly` (Menhir parser), and `.mll` (OCamllex lexer) files.
 
 > **Note:** Make sure you have an active opam switch with OCaml installed. The language server works best when run from a project directory with a proper `dune` build setup.
+
+</details>
+
+<details>
+<summary>Dart (<code>dart</code>)</summary>
+
+Install the Dart SDK or Flutter (which includes Dart). The language server uses the `dart language-server` command which is built into the Dart SDK.
+
+**Option 1: Flutter (recommended for Flutter projects)**
+```bash
+# macOS
+brew install --cask flutter
+
+# Linux (snap)
+sudo snap install flutter --classic
+
+# Windows (winget)
+winget install Google.Flutter
+
+# Or from https://flutter.dev/docs/get-started/install
+```
+
+**Option 2: Standalone Dart SDK**
+```bash
+# macOS
+brew install dart
+
+# Linux (apt)
+sudo apt-get install dart
+
+# Windows (winget)
+winget install Google.Dart
+
+# Or from https://dart.dev/get-dart
+```
+
+Ensure `dart` is in your PATH. You can verify with:
+```bash
+dart language-server --help
+```
 
 </details>

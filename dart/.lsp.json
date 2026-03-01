@@ -1,0 +1,17 @@
+{
+    "dart": {
+        "command": "dart",
+        "args": [
+            "language-server",
+            "--protocol=lsp"
+        ],
+        "extensionToLanguage": {
+            ".dart": "dart"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "startupTimeout": 60000,
+        "maxRestarts": 3
+    }
+}
