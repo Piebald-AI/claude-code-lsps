@@ -1,0 +1,26 @@
+{
+    "ada": {
+        "command": "ada_language_server",
+        "args": [],
+        "extensionToLanguage": {
+            ".adb": "ada",
+            ".ads": "ada",
+            ".adc": "ada"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    },
+    "gpr": {
+        "command": "ada_language_server",
+        "args": ["--language-gpr"],
+        "extensionToLanguage": {
+            ".gpr": "gpr"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}
