@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, and BSL (1C:Enterprise).  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), and Ada.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -350,7 +350,7 @@ bun install -g @vue/language-server@2
 
 > **Important:** Version 2.x is required. Version 3.x removed the internal TypeScript communication layer and requires the LSP client to implement custom request forwarding (`tsserver/request` → `tsserver/response`) between Vue and TypeScript language servers. Claude Code's simple LSP integration does not support this mechanism. See [v3 upgrade guide](https://github.com/vuejs/language-tools/discussions/5456) for details.
 
-The `vue-language-server` executable needs to be in your PATH.
+The plugin launcher scans `PATH` and picks the newest compatible `vue-language-server` **2.x.x** binary (ignoring `3.x.x`).
 
 **Important:** For full functionality, TypeScript must be installed in your project:
 ```bash
@@ -400,6 +400,37 @@ $env:PATH += ";$env:USERPROFILE\bsl-language-server\bin"
 ```
 
 The `bsl-language-server` executable needs to be in your PATH. Supports `.bsl` and `.os` files.
+
+</details>
+
+<details>
+<summary>Ada (<code>ada-language-server</code>)</summary>
+
+Install **ada_language_server** from AdaCore for Ada, SPARK, and GPR project support.
+
+**Using Alire (recommended):**
+```bash
+alr get ada_language_server
+cd ada_language_server*
+alr build
+# Add the bin directory to your PATH
+```
+
+**From GitHub releases:**
+
+Download pre-built binaries from [GitHub Releases](https://github.com/AdaCore/ada_language_server/releases).
+
+**From source:**
+```bash
+git clone https://github.com/AdaCore/ada_language_server.git
+cd ada_language_server
+make
+# Add the resulting executable to your PATH
+```
+
+The `ada_language_server` executable needs to be in your PATH. Supports `.adb` (body), `.ads` (spec), `.adc` (configuration), and `.gpr` (project) files.
+
+> **Note:** For best results, ensure your project has a valid `.gpr` project file. The language server uses GNAT project files to understand project structure and dependencies.
 
 </details>
 

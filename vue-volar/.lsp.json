@@ -1,7 +1,10 @@
 {
     "vue": {
-        "command": "vue-language-server",
-        "args": ["--stdio"],
+        "command": "sh",
+        "args": [
+            "-c",
+            "set -eu; best_candidate=''; best_version=''; is_newer_version(){ awk -v lhs=\"$1\" -v rhs=\"$2\" 'BEGIN{split(lhs,l,\".\");split(rhs,r,\".\");for(i=1;i<=3;i++){li=l[i]+0;ri=r[i]+0;if(li>ri)exit 0;if(li<ri)exit 1}exit 1}'; }; is_shim_path(){ case \"$1\" in */shims/*) return 0 ;; *) return 1 ;; esac; }; old_ifs=$IFS; IFS=:; for dir in $PATH; do [ -z \"$dir\" ] && dir='.'; candidate=\"$dir/vue-language-server\"; [ -x \"$candidate\" ] || continue; raw_version=$(\"$candidate\" --version 2>&1 || \"$candidate\" -v 2>&1 || true); version=$(printf %s \"$raw_version\" | awk '{while(match($0,/[0-9]+[.][0-9]+[.][0-9]+/)){found=substr($0,RSTART,RLENGTH);$0=substr($0,RSTART+RLENGTH)}} END{if(found!=\"\")print found}'); [ -n \"$version\" ] || continue; [ \"${version%%.*}\" = '2' ] || continue; replace='false'; if [ -z \"$best_version\" ] || is_newer_version \"$version\" \"$best_version\"; then replace='true'; elif [ \"$version\" = \"$best_version\" ] && is_shim_path \"$best_candidate\" && ! is_shim_path \"$candidate\"; then replace='true'; fi; if [ \"$replace\" = 'true' ]; then best_candidate=\"$candidate\"; best_version=\"$version\"; fi; done; IFS=$old_ifs; if [ -z \"$best_candidate\" ]; then echo 'vue-volar plugin requires vue-language-server v2.x.x; no compatible version found on PATH.' >&2; echo 'Install with: npm install -g @vue/language-server@2' >&2; echo 'Version 3.x is incompatible because it requires tsserver request forwarding.' >&2; exit 1; fi; exec \"$best_candidate\" --stdio"
+        ],
         "extensionToLanguage": {
             ".vue": "vue"
         },
