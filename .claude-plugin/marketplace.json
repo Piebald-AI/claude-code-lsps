@@ -656,6 +656,40 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "dart",
+      "version": "0.1.0",
+      "source": "./dart",
+      "description": "Dart language server for Claude Code, providing code intelligence for Dart and Flutter projects",
+      "category": "development",
+      "tags": [
+        "dart",
+        "flutter",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "dart": {
+          "command": "dart",
+          "args": [
+            "language-server",
+            "--protocol=lsp"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".dart": "dart"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
