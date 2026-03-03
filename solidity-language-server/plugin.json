@@ -1,0 +1,12 @@
+{
+  "name": "solidity-language-server",
+  "version": "0.1.0",
+  "description": "Fast Solidity language server powered by Foundry and solc",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/mmsaki/solidity-language-server",
+  "license": "MIT",
+  "keywords": ["solidity", "ethereum", "evm", "lsp", "language-server"]
+}

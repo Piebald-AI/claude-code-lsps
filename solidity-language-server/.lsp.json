@@ -1,0 +1,15 @@
+{
+    "solidity": {
+        "command": "solidity-language-server",
+        "args": [
+            "--stdio"
+        ],
+        "extensionToLanguage": {
+            ".sol": "solidity"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

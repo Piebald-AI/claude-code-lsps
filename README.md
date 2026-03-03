@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, and Dart.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, Dart, and Solidity.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -500,5 +500,26 @@ Ensure `dart` is in your PATH. You can verify with:
 ```bash
 dart language-server --help
 ```
+
+</details>
+
+<details>
+<summary>Solidity (<code>solidity-language-server</code>)</summary>
+
+A fast Solidity language server built in Rust, powered by Foundry's AST. Provides go-to-definition, find-references, rename, completions, hover (with NatSpec docs and selectors), document links, formatting (via `forge fmt`), and diagnostics.
+
+**Install via Cargo:**
+```bash
+cargo install solidity-language-server
+```
+
+Or download a pre-built binary from the [latest release](https://github.com/mmsaki/solidity-language-server/releases).
+
+Ensure `solidity-language-server` is in your PATH. You can verify with:
+```bash
+solidity-language-server --version
+```
+
+Your project should have a `foundry.toml` at the root (i.e., be a [Foundry](https://book.getfoundry.sh/) project).
 
 </details>

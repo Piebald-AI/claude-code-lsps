@@ -737,6 +737,40 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "solidity-language-server",
+      "version": "0.1.0",
+      "source": "./solidity-language-server",
+      "description": "Fast Solidity language server powered by Foundry and solc",
+      "category": "development",
+      "tags": [
+        "solidity",
+        "ethereum",
+        "evm",
+        "lsp",
+        "language-server",
+        "smart-contracts"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "solidity": {
+          "command": "solidity-language-server",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".sol": "solidity"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
