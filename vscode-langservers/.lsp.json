@@ -28,5 +28,51 @@
         "initializationOptions": {},
         "settings": {},
         "maxRestarts": 3
+    },
+    "eslint": {
+        "command": "vscode-eslint-language-server",
+        "args": [
+            "--stdio"
+        ],
+        "extensionToLanguage": {
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".cjs": "javascript",
+            ".ts": "typescript",
+            ".tsx": "typescriptreact",
+            ".vue": "vue",
+            ".svelte": "svelte",
+            ".astro": "astro"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {
+            "validate": "on",
+            "useESLintClass": true,
+            "run": "onType",
+            "format": false,
+            "quiet": false,
+            "onIgnoredFiles": "off",
+            "codeAction": {
+                "disableRuleComment": {
+                    "enable": true,
+                    "location": "separateLine"
+                },
+                "showDocumentation": {
+                    "enable": true
+                }
+            },
+            "codeActionOnSave": {
+                "mode": "all"
+            },
+            "problems": {
+                "shortenToSingleLine": false
+            },
+            "workingDirectory": {
+                "mode": "location"
+            }
+        },
+        "maxRestarts": 3
     }
 }
