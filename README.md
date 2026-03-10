@@ -303,21 +303,26 @@ Install-Module -Name PowerShellEditorServices -Scope CurrentUser
 </details>
 
 <details>
-<summary>HTML/CSS (<code>vscode-langservers</code>)</summary>
+<summary>HTML/CSS/ESLint (<code>vscode-langservers</code>)</summary>
 
-Install **vscode-langservers-extracted** for both HTML and CSS:
+Install **@zed-industries/vscode-langservers-extracted** for HTML, CSS, and ESLint:
 ```bash
 # npm
-npm install -g vscode-langservers-extracted
+npm install -g @zed-industries/vscode-langservers-extracted
 
 # pnpm
-pnpm install -g vscode-langservers-extracted
+pnpm install -g @zed-industries/vscode-langservers-extracted
 
 # bun
-bun install -g vscode-langservers-extracted
+bun install -g @zed-industries/vscode-langservers-extracted
 ```
 
-This provides `vscode-html-language-server` and `vscode-css-language-server` executables.
+This provides `vscode-html-language-server`, `vscode-css-language-server`, and `vscode-eslint-language-server` executables.
+
+The ESLint language server requires ESLint to be installed in your project:
+```bash
+npm install --save-dev eslint
+```
 
 </details>
 
