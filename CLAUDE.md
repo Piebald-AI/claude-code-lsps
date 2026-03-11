@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Claude Code marketplace containing LSP (Language Server Protocol) plugins. Each plugin integrates a language server with Claude Code, providing code intelligence features like go-to-definition, find-references, hover info, and symbol search.
 
-**Supported languages:** TypeScript/JavaScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL, Ada, Dart, Solidity
+**Supported languages:** TypeScript/JavaScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL, Ada, Dart, Solidity, Markdown/mdbase
 
 **Compatibility target:** Claude Code 2.1.50+ (latest release: 2.1.52)
 

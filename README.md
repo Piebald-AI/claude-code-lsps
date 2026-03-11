@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, Dart, and Solidity.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -554,5 +554,25 @@ solidity-language-server --version
 ```
 
 Your project should have a `foundry.toml` at the root (i.e., be a [Foundry](https://book.getfoundry.sh/) project).
+
+</details>
+
+<details>
+<summary>Markdown / mdbase (<code>mdbase-lsp</code>)</summary>
+
+A language server for [mdbase](https://github.com/callumalpass/mdbase-lsp) markdown collections. Provides diagnostics, completions, hover info, and go-to-definition for mdbase frontmatter and link targets.
+
+**Build from source:**
+```bash
+git clone https://github.com/callumalpass/mdbase-lsp.git
+cd mdbase-lsp
+cargo build --release
+```
+
+Then add the binary to your PATH (e.g., copy `target/release/mdbase-lsp` to a directory in `$PATH`).
+
+Or download a pre-built binary from the [latest release](https://github.com/callumalpass/mdbase-lsp/releases).
+
+Ensure `mdbase-lsp` is in your PATH. Your project must be a valid mdbase collection (a folder containing `mdbase.yaml`).
 
 </details>

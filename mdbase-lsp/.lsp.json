@@ -1,0 +1,13 @@
+{
+  "markdown": {
+    "command": "mdbase-lsp",
+    "args": [],
+    "extensionToLanguage": {
+      ".md": "markdown"
+    },
+    "transport": "stdio",
+    "initializationOptions": {},
+    "settings": {},
+    "maxRestarts": 3
+  }
+}

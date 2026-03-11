@@ -853,6 +853,36 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "mdbase-lsp",
+      "version": "0.1.0",
+      "source": "./mdbase-lsp",
+      "description": "Language server for mdbase markdown collections",
+      "category": "development",
+      "tags": [
+        "markdown",
+        "mdbase",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "markdown": {
+          "command": "mdbase-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".md": "markdown"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "name": "mdbase-lsp",
+  "version": "0.1.0",
+  "description": "Language server for mdbase markdown collections",
+  "author": { "name": "Piebald LLC", "email": "support@piebald.ai" },
+  "repository": "https://github.com/callumalpass/mdbase-lsp",
+  "license": "NOASSERTION",
+  "keywords": ["markdown", "mdbase", "lsp", "language-server"]
+}
