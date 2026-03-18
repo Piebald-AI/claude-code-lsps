@@ -1,0 +1,12 @@
+{
+  "name": "lean4-lake-lsp",
+  "version": "0.1.0",
+  "description": "Lean 4 language server via Lake — for Lake projects with dependencies (e.g., Mathlib). Replaces the inefficient CLI-based lake build workflow with native LSP integration for interactive theorem proving.",
+  "author": {
+    "name": "Yingte Xu",
+    "email": "lucianoxu@foxmail.com"
+  },
+  "repository": "https://github.com/LucianoXu/claude-lean4-lsp",
+  "license": "MIT",
+  "keywords": ["lean", "lean4", "theorem-proving", "mathematics", "formal-verification", "lake"]
+}
