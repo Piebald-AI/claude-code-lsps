@@ -1,0 +1,14 @@
+{
+  "lean": {
+    "command": "lake",
+    "args": ["serve"],
+    "transport": "stdio",
+    "extensionToLanguage": {
+      ".lean": "lean"
+    },
+    "initializationOptions": {},
+    "settings": {},
+    "startupTimeout": 60000,
+    "maxRestarts": 3
+  }
+}
