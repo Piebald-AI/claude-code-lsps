@@ -1,0 +1,12 @@
+{
+  "name": "lean4-lsp",
+  "version": "0.1.0",
+  "description": "Lean 4 language server for interactive theorem proving — replaces the inefficient CLI-based lake build workflow with native LSP integration, providing real-time diagnostics, hover info, go-to-definition, and completions for .lean files",
+  "author": {
+    "name": "Yingte Xu",
+    "email": "lucianoxu@foxmail.com"
+  },
+  "repository": "https://github.com/LucianoXu/claude-lean4-lsp",
+  "license": "MIT",
+  "keywords": ["lean", "lean4", "theorem-proving", "mathematics", "formal-verification", "interactive-proving"]
+}
