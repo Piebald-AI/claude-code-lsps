@@ -1,0 +1,12 @@
+{
+  "name": "svelte-lsp",
+  "version": "0.1.0",
+  "description": "Svelte language server integration",
+  "author": {
+    "name": "RaviTharuma",
+    "email": "ravi.tharuma@lava.agency"
+  },
+  "repository": "https://github.com/sveltejs/language-tools",
+  "license": "MIT",
+  "keywords": ["svelte", "lsp", "language-server"]
+}

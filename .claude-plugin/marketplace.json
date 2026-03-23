@@ -953,6 +953,39 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "svelte-lsp",
+      "version": "0.1.0",
+      "source": "./svelte",
+      "description": "Svelte language server integration",
+      "category": "development",
+      "tags": [
+        "svelte",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "RaviTharuma",
+        "email": "ravi.tharuma@lava.agency"
+      },
+      "lspServers": {
+        "svelte": {
+          "command": "svelteserver",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".svelte": "svelte"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "shutdownTimeout": 15000,
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
