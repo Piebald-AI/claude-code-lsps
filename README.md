@@ -250,6 +250,18 @@ Ensure `~/.composer/vendor/bin` (or `~/.config/composer/vendor/bin` on some syst
 </details>
 
 <details>
+<summary>PHP — php-lsp (<code>php-lsp</code>)</summary>
+
+Install **php-lsp** (requires [Rust](https://rustup.rs)):
+```bash
+cargo install php-lsp
+```
+
+The `php-lsp` executable needs to be in your PATH.
+
+</details>
+
+<details>
 <summary>Ruby (<code>ruby-lsp</code>)</summary>
 
 Install **ruby-lsp**:

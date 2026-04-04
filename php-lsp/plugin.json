@@ -1,0 +1,12 @@
+{
+  "name": "php-lsp",
+  "version": "0.1.0",
+  "description": "Full-featured PHP language server written in Rust — semantic diagnostics, code actions, refactoring, PSR-4/Composer, PHPUnit test runner",
+  "author": {
+    "name": "Jorg Sowa",
+    "email": "jorg.sowa@gmail.com"
+  },
+  "repository": "https://github.com/jorgsowa/php-lsp",
+  "license": "MIT",
+  "keywords": ["php", "lsp", "language-server", "diagnostics", "refactoring"]
+}

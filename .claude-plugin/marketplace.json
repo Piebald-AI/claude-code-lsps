@@ -412,6 +412,55 @@
       }
     },
     {
+      "name": "php-lsp",
+      "version": "0.1.0",
+      "source": "./php-lsp",
+      "description": "Full-featured PHP language server written in Rust — semantic diagnostics, code actions, refactoring, PSR-4/Composer, PHPUnit test runner",
+      "category": "development",
+      "tags": [
+        "php",
+        "lsp",
+        "language-server",
+        "diagnostics",
+        "refactoring"
+      ],
+      "author": {
+        "name": "Jorg Sowa",
+        "email": "jorg.sowa@gmail.com"
+      },
+      "lspServers": {
+        "php": {
+          "command": "php-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".php": "php",
+            ".php3": "php",
+            ".php4": "php",
+            ".php5": "php",
+            ".phps": "php",
+            ".phtml": "php"
+          },
+          "initializationOptions": {
+            "diagnostics": {
+              "arityErrors": true,
+              "deprecatedCalls": true,
+              "duplicateDeclarations": true,
+              "enabled": true,
+              "typeErrors": true,
+              "undefinedClasses": true,
+              "undefinedFunctions": true,
+              "undefinedVariables": true
+            },
+            "excludePaths": [],
+            "phpVersion": "8.1"
+          },
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
       "name": "omnisharp",
       "version": "0.1.0",
       "source": "./omnisharp",
