@@ -1,0 +1,31 @@
+{
+  "php": {
+    "command": "php-lsp",
+    "args": [],
+    "transport": "stdio",
+    "extensionToLanguage": {
+      ".php": "php",
+      ".php3": "php",
+      ".php4": "php",
+      ".php5": "php",
+      ".phps": "php",
+      ".phtml": "php"
+    },
+    "initializationOptions": {
+      "phpVersion": "8.1",
+      "excludePaths": [],
+      "diagnostics": {
+        "enabled": true,
+        "undefinedVariables": true,
+        "undefinedFunctions": true,
+        "undefinedClasses": true,
+        "arityErrors": true,
+        "typeErrors": true,
+        "deprecatedCalls": true,
+        "duplicateDeclarations": true
+      }
+    },
+    "settings": {},
+    "maxRestarts": 3
+  }
+}
