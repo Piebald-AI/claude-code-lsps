@@ -1037,6 +1037,40 @@
       }
     },
     {
+      "name": "haskell-language-server",
+      "version": "0.1.0",
+      "source": "./haskell-language-server",
+      "description": "Haskell language server with completion, references, type info, and document symbols",
+      "category": "development",
+      "tags": [
+        "haskell",
+        "lsp",
+        "language-server",
+        "hls",
+        "ghc"
+      ],
+      "author": {
+        "name": "Micah Stubbs",
+        "email": "git@micah.fyi"
+      },
+      "lspServers": {
+        "haskell": {
+          "command": "haskell-language-server-wrapper",
+          "args": [
+            "--lsp"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".hs": "haskell",
+            ".lhs": "haskell"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
       "name": "graphql-lsp",
       "version": "0.1.0",
       "source": "./graphql-lsp",
@@ -1061,8 +1095,8 @@
           ],
           "transport": "stdio",
           "extensionToLanguage": {
-            ".graphql": "graphql",
             ".gql": "graphql",
+            ".graphql": "graphql",
             ".graphqls": "graphql"
           },
           "initializationOptions": {},

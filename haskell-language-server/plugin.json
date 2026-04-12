@@ -1,0 +1,12 @@
+{
+  "name": "haskell-language-server",
+  "version": "0.1.0",
+  "description": "Haskell language server with completion, references, type info, and document symbols",
+  "author": {
+    "name": "Micah Stubbs",
+    "email": "git@micah.fyi"
+  },
+  "repository": "https://github.com/haskell/haskell-language-server",
+  "license": "Apache-2.0",
+  "keywords": ["haskell", "lsp", "language-server", "hls", "ghc"]
+}
