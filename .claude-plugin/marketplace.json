@@ -1035,6 +1035,41 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "graphql-lsp",
+      "version": "0.1.0",
+      "source": "./graphql-lsp",
+      "description": "GraphQL language server for schema and operation intelligence",
+      "category": "development",
+      "tags": [
+        "graphql",
+        "lsp",
+        "language-server",
+        "schema"
+      ],
+      "author": {
+        "name": "Dale Seo"
+      },
+      "lspServers": {
+        "graphql": {
+          "command": "graphql-lsp",
+          "args": [
+            "server",
+            "-m",
+            "stream"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".graphql": "graphql",
+            ".gql": "graphql",
+            ".graphqls": "graphql"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

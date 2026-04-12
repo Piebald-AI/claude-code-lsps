@@ -1,0 +1,11 @@
+{
+  "name": "graphql-lsp",
+  "version": "0.1.0",
+  "description": "GraphQL language server for schema and operation intelligence",
+  "author": {
+    "name": "Dale Seo"
+  },
+  "repository": "https://github.com/graphql/graphiql",
+  "license": "MIT",
+  "keywords": ["graphql", "lsp", "language-server", "schema"]
+}

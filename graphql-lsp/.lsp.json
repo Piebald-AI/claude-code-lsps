@@ -1,0 +1,15 @@
+{
+  "graphql": {
+    "command": "graphql-lsp",
+    "args": ["server", "-m", "stream"],
+    "transport": "stdio",
+    "extensionToLanguage": {
+      ".graphql": "graphql",
+      ".gql": "graphql",
+      ".graphqls": "graphql"
+    },
+    "initializationOptions": {},
+    "settings": {},
+    "maxRestarts": 3
+  }
+}
