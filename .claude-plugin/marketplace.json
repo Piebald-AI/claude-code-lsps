@@ -109,6 +109,42 @@
       }
     },
     {
+      "name": "ty",
+      "version": "0.1.0",
+      "source": "./ty",
+      "description": "Extremely fast Python type checker by Astral",
+      "category": "development",
+      "tags": [
+        "python",
+        "lsp",
+        "language-server",
+        "type-checking",
+        "ty",
+        "astral"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "python": {
+          "command": "ty",
+          "args": [
+            "server"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".py": "python",
+            ".pyi": "python",
+            ".pyw": "python"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
       "name": "basedpyright",
       "version": "0.1.0",
       "source": "./basedpyright",

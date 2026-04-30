@@ -1,0 +1,12 @@
+{
+  "name": "ty",
+  "version": "0.1.0",
+  "description": "Extremely fast Python type checker by Astral",
+  "author": {
+    "name": "Piebald LLC",
+    "email": "support@piebald.ai"
+  },
+  "repository": "https://github.com/astral-sh/ty",
+  "license": "MIT",
+  "keywords": ["python", "lsp", "language-server", "type-checking", "ty", "astral"]
+}

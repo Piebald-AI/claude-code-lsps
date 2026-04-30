@@ -139,6 +139,22 @@ bun install -g pyright
 </details>
 
 <details>
+<summary>Python (<code>ty</code>)</summary>
+
+Install **ty**, Astral's extremely fast Python type checker:
+```bash
+# uv (recommended)
+uv tool install ty
+
+# pip
+pip install ty
+```
+
+Make sure the `ty` executable is in your PATH. `ty` auto-detects `pyproject.toml` for project configuration.
+
+</details>
+
+<details>
 <summary>Go (<code>gopls</code>)</summary>
 
 Install **gopls**, the official Go language server:
