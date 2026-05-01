@@ -1,0 +1,9 @@
+{
+    "name": "swift-lsp",
+    "version": "0.1.0",
+    "description": "Swift and Objective-C language server (sourcekit-lsp)",
+    "author": { "name": "Piebald LLC", "email": "support@piebald.ai" },
+    "repository": "https://github.com/swiftlang/sourcekit-lsp",
+    "license": "Apache-2.0",
+    "keywords": ["swift", "objective-c", "lsp", "language-server", "sourcekit", "xcode"]
+}
