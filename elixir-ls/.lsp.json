@@ -1,0 +1,16 @@
+{
+    "elixir": {
+        "command": "elixir-ls",
+        "args": [],
+        "extensionToLanguage": {
+            ".ex": "elixir",
+            ".exs": "elixir",
+            ".heex": "phoenix-heex"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "startupTimeout": 60000,
+        "maxRestarts": 3
+    }
+}

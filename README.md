@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, Elixir, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -626,5 +626,43 @@ Then add the binary to your PATH (e.g., copy `target/release/mdbase-lsp` to a di
 Or download a pre-built binary from the [latest release](https://github.com/callumalpass/mdbase-lsp/releases).
 
 Ensure `mdbase-lsp` is in your PATH. Your project must be a valid mdbase collection (a folder containing `mdbase.yaml`).
+
+</details>
+
+<details>
+<summary>Elixir (<code>elixir-ls</code>)</summary>
+
+Install **ElixirLS**, the canonical Elixir language server (also used by VS Code's ElixirLS extension). Requires Elixir 1.15+ and Erlang/OTP 24+.
+
+**Using Homebrew (macOS, recommended):**
+```bash
+brew install elixir-ls
+```
+
+This installs the `elixir-ls` executable directly on your PATH.
+
+**Manual installation (Linux/Windows/from source):**
+```bash
+git clone https://github.com/elixir-lsp/elixir-ls.git
+cd elixir-ls
+mix deps.get
+MIX_ENV=prod mix compile
+MIX_ENV=prod mix elixir_ls.release2 -o ~/.elixir-ls/release
+```
+
+Then symlink the launcher onto your PATH:
+```bash
+chmod +x ~/.elixir-ls/release/language_server.sh
+ln -s ~/.elixir-ls/release/language_server.sh ~/.local/bin/elixir-ls
+```
+
+Verify with:
+```bash
+which elixir-ls
+```
+
+Supports `.ex` (Elixir modules), `.exs` (Elixir scripts), and `.heex` (Phoenix LiveView templates, mapped to language ID `phoenix-heex` per ElixirLS convention).
+
+> **Note:** On first launch in a new project, ElixirLS fetches and compiles Mix dependencies, which can take 30–60 seconds. Subsequent starts are faster.
 
 </details>

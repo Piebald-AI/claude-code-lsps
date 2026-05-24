@@ -1,0 +1,12 @@
+{
+  "name": "elixir-ls",
+  "version": "0.1.0",
+  "description": "Elixir language server (ElixirLS) with definitions, references, hover, and symbols",
+  "author": {
+    "name": "Morgan Allen",
+    "email": "morgan@skyslope.com"
+  },
+  "repository": "https://github.com/elixir-lsp/elixir-ls",
+  "license": "Apache-2.0",
+  "keywords": ["elixir", "lsp", "language-server", "elixir-ls", "phoenix"]
+}
