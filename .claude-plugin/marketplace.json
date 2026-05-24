@@ -1140,6 +1140,40 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "elixir-ls",
+      "version": "0.1.0",
+      "source": "./elixir-ls",
+      "description": "Elixir language server (ElixirLS) with definitions, references, hover, and symbols",
+      "category": "development",
+      "tags": [
+        "elixir",
+        "lsp",
+        "language-server",
+        "elixir-ls",
+        "phoenix"
+      ],
+      "author": {
+        "name": "Morgan Allen",
+        "email": "morgan@skyslope.com"
+      },
+      "lspServers": {
+        "elixir": {
+          "command": "elixir-ls",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".ex": "elixir",
+            ".exs": "elixir",
+            ".heex": "phoenix-heex"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
