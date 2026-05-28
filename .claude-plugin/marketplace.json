@@ -1174,6 +1174,38 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "gleam",
+      "version": "0.1.0",
+      "source": "./gleam",
+      "description": "Gleam language server integration (bundled with the Gleam compiler)",
+      "category": "development",
+      "tags": [
+        "gleam",
+        "lsp",
+        "language-server",
+        "functional"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "gleam": {
+          "command": "gleam",
+          "args": [
+            "lsp"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".gleam": "gleam"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

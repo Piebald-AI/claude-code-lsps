@@ -1,0 +1,13 @@
+{
+  "gleam": {
+    "command": "gleam",
+    "args": ["lsp"],
+    "transport": "stdio",
+    "extensionToLanguage": {
+      ".gleam": "gleam"
+    },
+    "initializationOptions": {},
+    "settings": {},
+    "maxRestarts": 3
+  }
+}

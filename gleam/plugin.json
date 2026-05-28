@@ -1,0 +1,9 @@
+{
+  "name": "gleam",
+  "version": "0.1.0",
+  "description": "Gleam language server integration (bundled with the Gleam compiler)",
+  "author": { "name": "Piebald LLC", "email": "support@piebald.ai" },
+  "repository": "https://github.com/gleam-lang/gleam",
+  "license": "Apache-2.0",
+  "keywords": ["gleam", "lsp", "language-server", "functional"]
+}
