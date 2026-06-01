@@ -6,10 +6,19 @@
             ".java": "java"
         },
         "transport": "stdio",
-        "initializationOptions": {},
+        "initializationOptions": {
+            "settings": {
+                "java": {
+                    "maven": {
+                        "downloadSources": true,
+                        "downloadJavadoc": true
+                    }
+                }
+            }
+        },
         "settings": {},
-        "startupTimeout": 90000,
+        "startupTimeout": 300000,
         "shutdownTimeout": 15000,
-        "maxRestarts": 3
+        "maxRestarts": 100
     }
 }
