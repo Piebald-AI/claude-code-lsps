@@ -1206,6 +1206,40 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "bash-language-server",
+      "version": "0.1.0",
+      "source": "./bash-language-server",
+      "description": "Bash language server (bash-lsp) providing IDE features for shell scripts",
+      "category": "development",
+      "tags": [
+        "bash",
+        "shell",
+        "sh",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "shellscript": {
+          "command": "bash-language-server",
+          "args": [
+            "start"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".bash": "shellscript",
+            ".sh": "shellscript"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

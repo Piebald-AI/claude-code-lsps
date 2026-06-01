@@ -1,0 +1,14 @@
+{
+    "shellscript": {
+        "command": "bash-language-server",
+        "args": ["start"],
+        "extensionToLanguage": {
+            ".bash": "shellscript",
+            ".sh": "shellscript"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

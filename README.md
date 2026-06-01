@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, Elixir, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, Elixir, Bash, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -664,5 +664,37 @@ which elixir-ls
 Supports `.ex` (Elixir modules), `.exs` (Elixir scripts), and `.heex` (Phoenix LiveView templates, mapped to language ID `phoenix-heex` per ElixirLS convention).
 
 > **Note:** On first launch in a new project, ElixirLS fetches and compiles Mix dependencies, which can take 30–60 seconds. Subsequent starts are faster.
+
+</details>
+
+<details>
+<summary>Bash (<code>bash-language-server</code>)</summary>
+
+Install **bash-language-server**, the official Bash LSP from [bash-lsp](https://github.com/bash-lsp/bash-language-server). It uses Tree-sitter for parsing and integrates with `shellcheck` (linting) and `shfmt` (formatting).
+
+```bash
+# npm
+npm install -g bash-language-server
+
+# pnpm
+pnpm install -g bash-language-server
+
+# bun
+bun install -g bash-language-server
+```
+
+Requires Node.js 20 or newer. Verify with:
+```bash
+bash-language-server --help
+```
+
+**Optional dependencies for richer features:**
+
+- [`shellcheck`](https://github.com/koalaman/shellcheck) — enables linting and code analysis (called automatically when files change).
+- [`shfmt`](https://github.com/mvdan/sh#shfmt) — enables the "format document" action.
+
+Install them via your package manager (e.g. `brew install shellcheck shfmt`, `apt-get install shellcheck`, `pacman -S shellcheck shfmt`).
+
+Ensure `bash-language-server` is in your PATH. Supports `.sh` and `.bash` files.
 
 </details>
