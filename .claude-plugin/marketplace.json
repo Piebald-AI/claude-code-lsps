@@ -233,11 +233,20 @@
           "extensionToLanguage": {
             ".java": "java"
           },
-          "initializationOptions": {},
+          "initializationOptions": {
+            "settings": {
+              "java": {
+                "maven": {
+                  "downloadJavadoc": true,
+                  "downloadSources": true
+                }
+              }
+            }
+          },
           "settings": {},
-          "startupTimeout": 90000,
+          "startupTimeout": 300000,
           "shutdownTimeout": 15000,
-          "maxRestarts": 3
+          "maxRestarts": 100
         }
       }
     },
@@ -1234,6 +1243,43 @@
           "extensionToLanguage": {
             ".bash": "shellscript",
             ".sh": "shellscript"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
+      "name": "swift-lsp",
+      "version": "0.1.0",
+      "source": "./swift-lsp",
+      "description": "Swift and Objective-C language server (sourcekit-lsp, macOS/Xcode)",
+      "category": "development",
+      "tags": [
+        "swift",
+        "objective-c",
+        "lsp",
+        "language-server",
+        "sourcekit",
+        "xcode",
+        "macos"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "swift": {
+          "command": "sourcekit-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".c": "c",
+            ".h": "objective-c",
+            ".m": "objective-c",
+            ".mm": "objective-cpp",
+            ".swift": "swift"
           },
           "initializationOptions": {},
           "settings": {},
