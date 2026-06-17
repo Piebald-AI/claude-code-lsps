@@ -1,0 +1,9 @@
+{
+  "name": "perl-lsp",
+  "version": "0.1.0",
+  "description": "Perl language server (perl-lsp) with type inference, cross-file navigation, and framework intelligence",
+  "author": { "name": "Piebald LLC", "email": "support@piebald.ai" },
+  "repository": "https://github.com/tree-sitter-perl/perl-tree-sitter-lsp",
+  "license": "Artistic-2.0",
+  "keywords": ["perl", "lsp", "language-server"]
+}

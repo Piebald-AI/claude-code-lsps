@@ -1,0 +1,18 @@
+{
+  "perl": {
+    "command": "perl-lsp",
+    "args": [],
+    "transport": "stdio",
+    "extensionToLanguage": {
+      ".pl": "perl",
+      ".pm": "perl",
+      ".t": "perl",
+      ".pod": "perl",
+      ".psgi": "perl",
+      ".cgi": "perl"
+    },
+    "initializationOptions": {},
+    "settings": {},
+    "maxRestarts": 3
+  }
+}
