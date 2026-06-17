@@ -290,7 +290,7 @@ gem install ruby-lsp
 <details>
 <summary>Perl (<code>perl-lsp</code>)</summary>
 
-Install **perl-lsp** (requires a Rust toolchain):
+Install **perl-lsp**. Download a prebuilt binary for your platform (macOS, Linux, Windows) from the [releases page](https://github.com/tree-sitter-perl/perl-tree-sitter-lsp/releases) and put `perl-lsp` on your `PATH`, or build from source with a Rust toolchain:
 ```bash
 cargo install perl-lsp
 ```
