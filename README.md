@@ -288,6 +288,18 @@ gem install ruby-lsp
 </details>
 
 <details>
+<summary>Perl (<code>perl-lsp</code>)</summary>
+
+Install **perl-lsp**. Download a prebuilt binary for your platform (macOS, Linux, Windows) from the [releases page](https://github.com/tree-sitter-perl/perl-tree-sitter-lsp/releases) and put `perl-lsp` on your `PATH`, or build from source with a Rust toolchain:
+```bash
+cargo install perl-lsp
+```
+
+Provides type inference without annotations, cross-file navigation, and framework intelligence for Moo/Moose, Mojolicious, and DBIx::Class. See the [project page](https://github.com/tree-sitter-perl/perl-tree-sitter-lsp) for details.
+
+</details>
+
+<details>
 <summary>C# (<code>omnisharp</code>)</summary>
 
 Install **OmniSharp** (requires .NET SDK):

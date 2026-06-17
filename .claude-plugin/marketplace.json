@@ -1286,6 +1286,40 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "perl-lsp",
+      "version": "0.1.0",
+      "source": "./perl-lsp",
+      "description": "Perl language server (perl-lsp) with type inference, cross-file navigation, and framework intelligence",
+      "category": "development",
+      "tags": [
+        "perl",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Piebald LLC",
+        "email": "support@piebald.ai"
+      },
+      "lspServers": {
+        "perl": {
+          "command": "perl-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".cgi": "perl",
+            ".pl": "perl",
+            ".pm": "perl",
+            ".pod": "perl",
+            ".psgi": "perl",
+            ".t": "perl"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }
