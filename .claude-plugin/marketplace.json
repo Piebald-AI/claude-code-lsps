@@ -9,6 +9,44 @@
   },
   "plugins": [
     {
+      "name": "typescript-language-server",
+      "version": "0.1.0",
+      "source": "./typescript-language-server",
+      "description": "TypeScript and JavaScript language server integration (using typescript-language-server)",
+      "category": "development",
+      "tags": [
+        "typescript",
+        "javascript",
+        "lsp",
+        "language-server",
+        "typescript-language-server"
+      ],
+      "author": {
+        "name": "Kilian PAQUIER",
+        "email": "noreply@kilianpaquier.dev"
+      },
+      "lspServers": {
+        "typescript": {
+          "command": "typescript-language-server",
+          "args": [
+            "--stdio"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".cjs": "javascript",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".ts": "typescript",
+            ".tsx": "typescriptreact"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
       "name": "vtsls",
       "version": "0.1.0",
       "source": "./vtsls",

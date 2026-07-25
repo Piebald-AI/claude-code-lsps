@@ -1,0 +1,20 @@
+{
+    "typescript": {
+        "command": "typescript-language-server",
+        "args": [
+            "--stdio"
+        ],
+        "extensionToLanguage": {
+            ".cjs": "javascript",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".ts": "typescript",
+            ".tsx": "typescriptreact"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

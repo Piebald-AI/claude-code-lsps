@@ -1,0 +1,12 @@
+{
+  "name": "typescript-language-server",
+  "version": "0.1.0",
+  "description": "TypeScript and JavaScript language server integration (using typescript-language-server)",
+  "author": {
+    "name": "Kilian PAQUIER",
+    "email": "noreply@kilianpaquier.dev"
+  },
+  "repository": "https://github.com/typescript-language-server/typescript-language-server",
+  "license": "Apache-2.0 and MIT",
+  "keywords": ["typescript", "javascript", "lsp", "language-server", "typescript-language-server"]
+}
