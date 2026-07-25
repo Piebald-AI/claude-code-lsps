@@ -1320,6 +1320,41 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "tofu-ls",
+      "version": "0.1.0",
+      "source": "./tofu-ls",
+      "description": "Official OpenTofu language server",
+      "category": "development",
+      "tags": [
+        "opentofu",
+        "terraform",
+        "hcl",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Kilian PAQUIER",
+        "email": "noreply@kilianpaquier.dev"
+      },
+      "lspServers": {
+        "opentofu": {
+          "command": "tofu-ls",
+          "args": [
+            "serve"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".tf": "opentofu",
+            ".tfvars": "opentofu-vars",
+            ".tofu": "opentofu"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

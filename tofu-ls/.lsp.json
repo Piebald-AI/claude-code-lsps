@@ -1,0 +1,17 @@
+{
+    "opentofu": {
+        "command": "tofu-ls",
+        "args": [
+            "serve"
+        ],
+        "extensionToLanguage": {
+            ".tf": "opentofu",
+            ".tfvars": "opentofu-vars",
+            ".tofu": "opentofu"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}

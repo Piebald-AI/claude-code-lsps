@@ -1,0 +1,12 @@
+{
+  "name": "tofu-ls",
+  "version": "0.1.0",
+  "description": "Official OpenTofu language server",
+  "author": {
+    "name": "Kilian PAQUIER",
+    "email": "noreply@kilianpaquier.dev"
+  },
+  "repository": "https://github.com/opentofu/tofu-ls",
+  "license": "MPL-2.0",
+  "keywords": ["opentofu", "terraform", "hcl", "lsp", "language-server"]
+}

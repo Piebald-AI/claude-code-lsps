@@ -710,3 +710,29 @@ Install them via your package manager (e.g. `brew install shellcheck shfmt`, `ap
 Ensure `bash-language-server` is in your PATH. Supports `.sh` and `.bash` files.
 
 </details>
+
+<details>
+<summary>OpenTofu (<code>tofu-ls</code>)</summary>
+
+Install **tofu-ls**, the official OpenTofu language server:
+
+```bash
+# Homebrew (core, no tap needed)
+brew install tofu-ls
+
+# Prebuilt binary, e.g. Linux x86_64 (see https://github.com/opentofu/tofu-ls/releases for other platforms)
+VERSION=0.5.3
+curl -LO "https://github.com/opentofu/tofu-ls/releases/download/v${VERSION}/tofu-ls_Linux_x86_64.tar.gz"
+tar -xzf "tofu-ls_Linux_x86_64.tar.gz" -C ~/.local/bin tofu-ls
+rm "tofu-ls_Linux_x86_64.tar.gz"
+```
+
+Make sure the `tofu-ls` executable is in your PATH. Verify with:
+
+```bash
+tofu-ls version
+```
+
+Supports `.tf`, `.tofu`, and `.tfvars` files.
+
+</details>
