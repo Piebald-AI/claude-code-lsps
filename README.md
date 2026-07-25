@@ -736,3 +736,37 @@ tofu-ls version
 Supports `.tf`, `.tofu`, and `.tfvars` files.
 
 </details>
+
+<details>
+<summary>Terraform (<code>terraform-ls</code>)</summary>
+
+Install **terraform-ls**, the official Terraform language server from HashiCorp:
+
+```bash
+# Homebrew
+brew install hashicorp/tap/terraform-ls
+
+# Prebuilt binary, e.g. Linux amd64 (see https://releases.hashicorp.com/terraform-ls/ for other platforms)
+VERSION=0.39.0
+curl -LO "https://releases.hashicorp.com/terraform-ls/${VERSION}/terraform-ls_${VERSION}_linux_amd64.zip"
+unzip "terraform-ls_${VERSION}_linux_amd64.zip" -d ~/.local/bin
+rm "terraform-ls_${VERSION}_linux_amd64.zip"
+```
+
+**Debian/Ubuntu (apt)**, via HashiCorp's [official packaging guide](https://www.hashicorp.com/official-packaging-guide):
+
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform-ls
+```
+
+Make sure the `terraform-ls` executable is in your PATH. Verify with:
+
+```bash
+terraform-ls version
+```
+
+Supports `.tf`, `.tfvars`, `.tfcomponent.hcl`, `.tfdeploy.hcl`, `.tfquery.hcl`, `.policy.hcl`, and `.policytest.hcl` files.
+
+</details>

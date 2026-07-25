@@ -1,0 +1,12 @@
+{
+  "name": "terraform-ls",
+  "version": "0.1.0",
+  "description": "Official Terraform language server",
+  "author": {
+    "name": "Kilian PAQUIER",
+    "email": "noreply@kilianpaquier.dev"
+  },
+  "repository": "https://github.com/hashicorp/terraform-ls",
+  "license": "MPL-2.0",
+  "keywords": ["terraform", "hcl", "lsp", "language-server"]
+}

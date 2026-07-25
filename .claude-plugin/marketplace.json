@@ -1355,6 +1355,44 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "terraform-ls",
+      "version": "0.1.0",
+      "source": "./terraform-ls",
+      "description": "Official Terraform language server",
+      "category": "development",
+      "tags": [
+        "terraform",
+        "hcl",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "Kilian PAQUIER",
+        "email": "noreply@kilianpaquier.dev"
+      },
+      "lspServers": {
+        "terraform": {
+          "command": "terraform-ls",
+          "args": [
+            "serve"
+          ],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".policy.hcl": "terraform-policy",
+            ".policytest.hcl": "terraform-policytest",
+            ".tf": "terraform",
+            ".tfcomponent.hcl": "terraform-stack",
+            ".tfdeploy.hcl": "terraform-deploy",
+            ".tfquery.hcl": "terraform-search",
+            ".tfvars": "terraform-vars"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

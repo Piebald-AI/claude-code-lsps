@@ -1,0 +1,21 @@
+{
+    "terraform": {
+        "command": "terraform-ls",
+        "args": [
+            "serve"
+        ],
+        "extensionToLanguage": {
+            ".policy.hcl": "terraform-policy",
+            ".policytest.hcl": "terraform-policytest",
+            ".tf": "terraform",
+            ".tfcomponent.hcl": "terraform-stack",
+            ".tfdeploy.hcl": "terraform-deploy",
+            ".tfquery.hcl": "terraform-search",
+            ".tfvars": "terraform-vars"
+        },
+        "transport": "stdio",
+        "initializationOptions": {},
+        "settings": {},
+        "maxRestarts": 3
+    }
+}
