@@ -29,7 +29,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code LSPs
 
-This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, Elixir, Bash, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
+This repository contains a [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with plugins that offer LSP servers for TypeScript, Rust, Python, Go, Java, Kotlin, Scala, C/C++, PHP, Ruby, C#, PowerShell, HTML/CSS, LaTeX, Julia, Vue, Svelte, OCaml, BSL (1C:Enterprise), Ada, Dart, Solidity, Elixir, Bash, Lean 4, and Markdown/mdbase.  [LSP servers](https://microsoft.github.io/language-server-protocol) provide powerful and familiar code intelligence features to IDEs, and now Claude Code directly.
 
 [**Claude Code officially supports LSP.**](https://www.reddit.com/r/ClaudeAI/comments/1otdfo9/lsp_is_coming_to_claude_code_and_you_can_try_it)  In 2.0.74 they officially added it to the [changelog](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2074).  Previously, the new `LSP` builtin tool had to be enabled manually via `$ENABLE_LSP_TOOL=1`.
 
@@ -792,5 +792,25 @@ terraform-ls version
 ```
 
 Supports `.tf`, `.tfvars`, `.tfcomponent.hcl`, `.tfdeploy.hcl`, `.tfquery.hcl`, `.policy.hcl`, and `.policytest.hcl` files.
+
+</details>
+
+<details>
+<summary>Lean 4 (<code>lean4-lsp</code>)</summary>
+
+Install Lean 4 through [elan](https://github.com/leanprover/elan), and have Node.js 18+ (or Bun/Deno) available: the plugin's launcher uses it to start the right Lean server for each file.
+
+```bash
+curl https://elan.lean-lang.org/elan-init.sh -sSf | sh
+```
+
+This entry is installed from [LucianoXu/claude-lean4-lsp](https://github.com/LucianoXu/claude-lean4-lsp) through a `git-subdir` source, which needs Claude Code 2.1.69+. For each file it finds the enclosing Lake project and runs `lake serve` there (`lean --server` for standalone files), so sessions started above a project or in a git worktree resolve imports correctly; it finds elan's binaries even when they are not on PATH, and it bounds how many Lean worker processes stay alive, each about 2 GB once Mathlib is imported. It also bundles the `lean-goal` CLI for proof goals, tactic trials and Mathlib-wide lemma search; see its README.
+
+Supports `.lean` files. It replaces the former `lean4-lake-lsp` and `lean4-lean-lsp` plugins; only one server can claim `.lean` files, so uninstall those first:
+
+```bash
+claude plugin uninstall lean4-lake-lsp@claude-code-lsps
+claude plugin uninstall lean4-lean-lsp@claude-code-lsps
+```
 
 </details>

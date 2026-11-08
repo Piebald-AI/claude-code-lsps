@@ -1017,10 +1017,13 @@
       }
     },
     {
-      "name": "lean4-lake-lsp",
-      "version": "0.1.0",
-      "source": "./lean4-lake-lsp",
-      "description": "Lean 4 language server via Lake — for Lake projects with dependencies (e.g., Mathlib). Replaces the inefficient CLI-based lake build workflow with native LSP integration for interactive theorem proving.",
+      "name": "lean4-lsp",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/LucianoXu/claude-lean4-lsp.git",
+        "path": "plugins/lean4-lsp"
+      },
+      "description": "Lean 4 language server with per-file Lake project-root detection (lake serve, or lean --server for standalone files), elan toolchain discovery, multi-project and worktree routing, and bounded memory (Lean workers are closed when idle or past a cap). Bundles the lean-goal CLI for proof goals, candidate tactics and Mathlib-wide lemma search.",
       "category": "development",
       "tags": [
         "lean",
@@ -1033,57 +1036,6 @@
       "author": {
         "name": "Yingte Xu",
         "email": "lucianoxu@foxmail.com"
-      },
-      "lspServers": {
-        "lean": {
-          "command": "lake",
-          "args": [
-            "serve"
-          ],
-          "transport": "stdio",
-          "extensionToLanguage": {
-            ".lean": "lean"
-          },
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "maxRestarts": 3
-        }
-      }
-    },
-    {
-      "name": "lean4-lean-lsp",
-      "version": "0.1.0",
-      "source": "./lean4-lean-lsp",
-      "description": "Lean 4 language server via the lean binary — for standalone .lean files outside Lake projects. Replaces the inefficient CLI-based workflow with native LSP integration for interactive theorem proving.",
-      "category": "development",
-      "tags": [
-        "lean",
-        "lean4",
-        "theorem-proving",
-        "mathematics",
-        "formal-verification",
-        "standalone"
-      ],
-      "author": {
-        "name": "Yingte Xu",
-        "email": "lucianoxu@foxmail.com"
-      },
-      "lspServers": {
-        "lean": {
-          "command": "lean",
-          "args": [
-            "--server"
-          ],
-          "transport": "stdio",
-          "extensionToLanguage": {
-            ".lean": "lean"
-          },
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "maxRestarts": 3
-        }
       }
     },
     {
