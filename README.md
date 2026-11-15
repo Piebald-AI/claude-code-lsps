@@ -302,6 +302,18 @@ The `php-lsp` executable needs to be in your PATH.
 </details>
 
 <details>
+<summary>Robot Framework (<code>robotframework-lint-lsp</code>)</summary>
+
+Install **robotframework-lint-lsp** (Python 3.10+):
+```bash
+pip install robotframework-lint-lsp
+```
+
+The `robotframework-lint-lsp` executable needs to be in your PATH.
+
+</details>
+
+<details>
 <summary>Ruby (<code>ruby-lsp</code>)</summary>
 
 Install **ruby-lsp**:
