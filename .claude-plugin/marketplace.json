@@ -1383,6 +1383,38 @@
           "maxRestarts": 3
         }
       }
+    },
+    {
+      "name": "robotframework-lint-lsp",
+      "version": "0.1.0",
+      "source": "./robotframework-lint-lsp",
+      "description": "Robot Framework lint diagnostics (robocop rules plus RF 7.5 checks) for .robot and .resource files",
+      "category": "development",
+      "tags": [
+        "robotframework",
+        "robocop",
+        "lsp",
+        "language-server"
+      ],
+      "author": {
+        "name": "ai94iq"
+      },
+      "lspServers": {
+        "robotframework": {
+          "command": "robotframework-lint-lsp",
+          "args": [],
+          "transport": "stdio",
+          "extensionToLanguage": {
+            ".resource": "robotframework",
+            ".robot": "robotframework"
+          },
+          "initializationOptions": {},
+          "settings": {},
+          "startupTimeout": 60000,
+          "shutdownTimeout": 15000,
+          "maxRestarts": 3
+        }
+      }
     }
   ]
 }

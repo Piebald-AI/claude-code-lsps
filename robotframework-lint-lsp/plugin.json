@@ -1,0 +1,16 @@
+{
+  "name": "robotframework-lint-lsp",
+  "version": "0.1.0",
+  "description": "Robot Framework lint diagnostics (robocop rules plus RF 7.5 checks) for .robot and .resource files",
+  "author": {
+    "name": "ai94iq"
+  },
+  "repository": "https://github.com/ai94iq/robotframework-lint-lsp",
+  "license": "MIT",
+  "keywords": [
+    "robotframework",
+    "robocop",
+    "lsp",
+    "language-server"
+  ]
+}
